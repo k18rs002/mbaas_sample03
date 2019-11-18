@@ -47,15 +47,15 @@
       })
     }
     function deleteData() {
-      Update.Fetch().then(function(uTdata)){
+      UTdate.fetch().then(function(uTdata){
         return uTdata.delete();
       })
-      .then(function(results)){
+      .then(function(results){
         $("#display").removeClass();
         $("#display").addClass("bg-success");
         $("#display").html("delete success");
       })
-      .then(function(error)){
+      .then(function(error){
         $("#display").removeClass();
         $("#display").addClass("bg-warning");
         $("#display").html("delete fail:" + JSON.stringify(error));
